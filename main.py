@@ -11,8 +11,8 @@ def salvar_video(link_do_video):
         video_stream.download() # baixa o vídeo no diretório do projeto
 
         return '\nDownload completo!'
-    except:
-        return 'Não foi possível baixar o vídeo.'
+    except Exception as e:
+        return f'Não foi possível baixar o vídeo. {e}.'
 
 if __name__ == "__main__":
     while True:
